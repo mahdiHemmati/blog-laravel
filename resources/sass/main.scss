@@ -1,0 +1,49 @@
+@import "colors";
+
+@mixin image-background($position) {
+    background-position: $position;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.n-img-container{
+    height: 250px;
+    @include image-background(center);//include from @mixin with position argument
+}
+
+.n-tag{
+    color: $myWhit;
+    text-decoration: none;
+    a {
+        color: $myBlack;
+        font-size: 1.2em;
+        display: block;
+    }
+}
+
+.display-comment{
+    background-color: lightgray;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #0c5460;
+}
+
+//.button-basic  {
+//    border: none;
+//    padding: 15px 30px;
+//    text-align: center;
+//    font-size: 16px;
+//    cursor: pointer;
+//}
+//
+//.button-report  {
+//    @extend .button-basic;//include all attribute in the .button-basic with @extend keyword
+//    background-color: red;
+//}
+//
+//.button-submit  {
+//    @extend .button-basic;
+//    background-color: green;
+//    color: white;
+//}
